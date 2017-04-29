@@ -29,6 +29,10 @@ href="AddUser.jsp">ADD A USER</a>
 <tr>
 <td style="vertical-align: top;">
 Edit
+<td style="vertical-align: top; text-align: center;">FirstName
+</td>
+<td style="vertical-align: top; text-align: center;">LastName
+</td>
 <td style="vertical-align: top; text-align: center;">Username
 </td>
 <td style="vertical-align: top; text-align: center;">Password
@@ -49,6 +53,10 @@ for(Account account: aUI.viewAllUser()){
     <input name="Edit" value="Edit" type="submit">
     <input name="Username" value=<%out.print(account.getUsername());%> type="hidden">
 </form>
+<td style="vertical-align: top;"><%out.println(account.getFirstName());%>
+</td>
+<td style="vertical-align: top;"><%out.println(account.getLastName());%>
+</td>
 <td style="vertical-align: top;"><%out.println(account.getUsername());%>
 </td>
 <td style="vertical-align: top;"><%out.println(account.getPassword());%>

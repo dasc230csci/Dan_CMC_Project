@@ -89,6 +89,7 @@ li a:hover {
   <li><a class="active" href="SearchMenu.jsp">Search for Schools</a></li>
   <li><a class ="active" href="ManageSavedSchool.jsp">Manage My Saved Schools</a></li>
   <li><a class ="active" href ="UserEditProfile.jsp">Manage My Profile</a></li>
+  <li><a class ="active" href ="../WebContent/UserLogOut.jsp">LogOut</a></li>
 </ul>
 <br>
 Hello User <%out.println(uUI.getUsername());%>

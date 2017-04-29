@@ -32,7 +32,7 @@ cellpadding="2" cellspacing="2">
 <td style="vertical-align: top; width: 723px;">SCHOOL<br>
 </td>
 <td style="vertical-align: top; width: 218px;"><input value="<%out.print(theUni.getSchoolName());%>"
-name="schoolInput"><br>
+name="schoolInput" readonly="readonly"><br>
 </td>
 </tr>
 <tr>

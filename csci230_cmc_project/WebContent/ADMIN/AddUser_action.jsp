@@ -9,21 +9,21 @@ String type = request.getParameter("Type");
 String status = request.getParameter("Status");
 int verifyCreate = aUI.createUser(fname, lname, uname, password, type, status);
 if(verifyCreate==0){
-response.sendRedirect("Add.jsp");
+response.sendRedirect("ManageUserMenu.jsp");
 }
 else if(verifyCreate==-1){
-	response.sendRedirect("Add.jsp?Error=-1");
+	response.sendRedirect("AddUser.jsp?Error=-1");
 }
 else if(verifyCreate==-2){
-	response.sendRedirect("Add.jsp?Error=-2");
+	response.sendRedirect("AddUser.jsp?Error=-2");
 }
 else if(verifyCreate==-3){
-	response.sendRedirect("Add.jsp?Error=-3");
+	response.sendRedirect("AddUser.jsp?Error=-3");
 }
 else if(verifyCreate==-4){
-	response.sendRedirect("Add.jsp?Error=-4");
+	response.sendRedirect("AddUser.jsp?Error=-4");
 }
 else{
-	response.sendRedirect("Add.jsp?Error=-5");
+	response.sendRedirect("AddUser.jsp?Error=-5");
 }
 %>
