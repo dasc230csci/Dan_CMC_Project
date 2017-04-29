@@ -40,7 +40,7 @@ li a:hover {
 </ul>
 <br>
 <br>
-<h2 style="text-align: center; color: white"> Manage Saved Schools </h2>
+<h2 style="text-align: center; color: white">Manage Saved Schools </h2>
   <%
    String error = request.getParameter("Error");
    if(error !=null && error.equals("1")){
@@ -54,7 +54,7 @@ li a:hover {
   
 
     <% if (uUI.viewSavedSchool().isEmpty()){ %>
-    	<h4 style="text-align: center; color:white"> You have no saved schools! </h4>
+    	<h4 style="text-align: center; color:white">You have no saved schools! </h4>
     	
 <%} else { %>
 <table style="text-align: auto; background-color: white; border-radius: 5px; width: 100%; height: 33px;" border="1"; cellpadding="2" cellspacing="2" >
@@ -62,7 +62,7 @@ li a:hover {
     <% for (String u : uUI.viewSavedSchool()) {  %>
       <tr>
         <td style="vertical-align: top; width: 33%;">
-         <form action="USER/RemoveSavedSchool.jsp" name="RemoveSavedSchools">
+         <form action="RemoveSavedSchool.jsp" name="RemoveSavedSchools">
          <input name="RemoveSchool" value="Remove" type="submit"><input name="schoolName"
 			value="<%out.print(u);%>" type="hidden"></form>
          <br>

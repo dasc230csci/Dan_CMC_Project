@@ -110,7 +110,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 
 
-<form method="post" action="Edit_action.jsp" name="editInfo">
+<form method="post" action="UserEditProfile_action.jsp" name="editInfo">
 <table
 style="background-color:white; border-radius: 5px; text-align: left; width: 400px; height: 154px; margin-left: auto; margin-right: auto; 
 border="1" cellpadding="2" cellspacing="2">
