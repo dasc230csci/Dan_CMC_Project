@@ -1,4 +1,5 @@
 <%@page language="java" import="UI.*"%>
+<%@include file="adminVerifyLogin.jsp"%>
 <%
 AdminUI aUI = (AdminUI)session.getAttribute("adminUi");
 String schoolName = request.getParameter("schoolName");

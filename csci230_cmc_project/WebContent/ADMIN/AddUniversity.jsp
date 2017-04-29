@@ -1,20 +1,55 @@
 <%@ page language="java" import="Controller.*"%>
+<%@include file="adminVerifyLogin.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<style>
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+table {
+   border: none;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #f5f5f5}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: center;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+</style>
 <head>
+<link href="CSS.html" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
+<ul>
+  <li><a class="active" href="AdminMenu.jsp">Return To Menu</a></li>
+</ul>
+<br>
+<br>
+</head>
 <%String error = request.getParameter("Error");
 	if(error !=null && error.equals("1")){
 		out.println("Add Failed");
 	}
 %>
-<title>addUniversity</title>
-</head>
 <body>
+<center><h3 style="color:white">Add University</h3></center>
 <form method="post" action="AddUniversity_action.jsp" name="AddUniversity">
 <br>
-	<table style="text-align: left; height: 541px; width: 959px;" border="1"
+	<table style="text-align: left; background-color: white; height: 541px; width: 959px;" border="1"
 	cellpadding="2" cellspacing="2">
 	<tbody>
 	<tr>
@@ -151,5 +186,15 @@ http-equiv="content-type">
 &nbsp;<br>
 <br>
 </form>
+<br>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

@@ -15,16 +15,51 @@ for(University u : list){
 list.remove(sameUniv);
 %>
 <html>
+<style>
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+table {
+   border: none;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #f5f5f5}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: center;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+</style>
 <head>
+<link href="CSS.html" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title>SearchResult</title>
+<ul>
+  <li><a class="active" href="UserMenu.jsp">Return To Menu</a></li>
+</ul>
+<br>
+<br>
 </head>
 <body>
+<center><h3 style="color:white">View School</h3></center>
+
 <form method="post" action="SaveSchool.jsp" name="Save"><input name="Save"
 value="Save" type="submit"><input name="schoolName" value="<%out.print(schoolName);%>"
 type="hidden"></form>
-<table style="text-align: left; width: 1137px; height: 540px;"
+<table style="text-align: left; background-color: white; width: 1137px; height: 540px;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -143,7 +178,7 @@ readonly="readonly" name="qualOfLifeScale" value="<%out.print(univ.getQualOfLife
 <form method="post" action="SaveSchool.jsp" name="Save"><input name="Save"
 value="Save" type="submit"><input name="schoolName" value="<%out.print(u.getSchoolName());%>"
 type="hidden"></form> MAY WE ALSO RECOMMEND<br>
-<table style="text-align: left; width: 1137px; height: 540px;"
+<table style="text-align: left; background-color: white; width: 1137px; height: 540px;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -258,6 +293,16 @@ readonly="readonly" name="qualOfLifeScale" value="<%out.print(u.getQualOfLifeSca
 </tbody>
 </table>
 <%}%>
-
+<br>
+<br>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

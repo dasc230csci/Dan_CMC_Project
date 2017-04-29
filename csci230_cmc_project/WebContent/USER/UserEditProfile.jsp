@@ -1,4 +1,5 @@
 <%@page language="java" import="UI.*" import = "Entity.*"%>
+<%@include file="userVerifyLogin.jsp"%>
 <% UserUI uUI = (UserUI)session.getAttribute("userUi");
 	String error= request.getParameter("Error");
 	if(error != null && error.equals("1")){
@@ -10,10 +11,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+body {font-family: Verdana,sans-serif;margin:0; background-color:#686868}
 table {
    border: none;
   border-collapse: collapse;
 }
+
+
 tr:hover {background-color: #f5f5f5}
 ul {
     list-style-type: none;
@@ -22,9 +26,11 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
+
 li {
     float: center;
 }
+
 li a {
     display: block;
     color: white;
@@ -32,9 +38,11 @@ li a {
     padding: 10px 17px;
     text-decoration: none;
 }
+
 li a:hover {
     background-color: #111;
 }
+
 body {font-family: Verdana,sans-serif;margin:0}
 .slide {display:none}
 .slideshow-container {
@@ -42,6 +50,7 @@ body {font-family: Verdana,sans-serif;margin:0}
   position: relative;
   margin: auto;
 }
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -53,15 +62,18 @@ body {font-family: Verdana,sans-serif;margin:0}
   font-weight: bold;
   font-size: 18px;
 }
+
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
+
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -72,15 +84,18 @@ body {font-family: Verdana,sans-serif;margin:0}
   width: 100%;
   text-align: center;
 }
+
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 2s;
 }
+
 @-webkit-keyframes fade {
   from {opacity: .2} 
   to {opacity: 1}
 }
+
 </style>
 
 </head>
@@ -89,7 +104,7 @@ body {font-family: Verdana,sans-serif;margin:0}
   <li><a class="active" href="UserMenu.jsp">Return To Menu</a></li>
 </ul>
 <br>
-<center><h3> Edit User Page</h3></center>
+<center><h3 style="color:white"> Edit User Page</h3></center>
 <br>
 
 
@@ -97,7 +112,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 <form method="post" action="Edit_action.jsp" name="editInfo">
 <table
-style="text-align: left; width: 500px; height: 154px; margin-left: auto; margin-right: auto;"
+style="background-color:white; border-radius: 5px; text-align: left; width: 400px; height: 154px; margin-left: auto; margin-right: auto; 
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -135,9 +150,12 @@ value=<%out.print(uUI.viewProfile().getPassword());%>><br>
 name="Type" value="u"><br>
 </td>
 </tr>
+<tr>
+</tr>
 </tbody>
 </table>
 
+<center>
 <span style="font-family: &quot;Sans&quot;;"><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -145,6 +163,7 @@ name="Type" value="u"><br>
 <input name="Submit" value="Edit User" type="submit">&nbsp;&nbsp;&nbsp;
 <input name="Reset" value="Reset" type="reset"></span>&nbsp; <br>
 </form>
+</center>
 
 <br>
 <br>
@@ -175,14 +194,17 @@ name="Type" value="u"><br>
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
+
 function nextSlides() {
   slideIndex++;
   showSlides(slideIndex);
 }
+
 function prevSlides(){
 	slideIndex--;
 	showSlides(slideIndex);
 }
+
 function showSlides(index) {
   var i;
   var slides = document.getElementsByClassName("slide");
@@ -194,5 +216,14 @@ function showSlides(index) {
   slides[slideIndex-1].style.display = "block";  
 }
 </script>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

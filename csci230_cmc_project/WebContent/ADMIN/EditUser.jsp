@@ -1,13 +1,49 @@
 <%@ page language="java" import="Controller.*, java.util.*, UI.*, Entity.*"%>
+<%@include file="adminVerifyLogin.jsp"%>
 <%
 AdminUI adminUi = (AdminUI)session.getAttribute("adminUi");
 String username = request.getParameter("Username");
 Account account = adminUi.viewOthersProfile(username);
 %>
 <html>
+<style>
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+table {
+   border: none;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #f5f5f5}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: center;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+</style>
 <head>
-
-<title>Edit User Form</title>
+<link href="CSS.html" rel="stylesheet" type="text/css" />
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<ul>
+  <li><a class="active" href="AdminMenu.jsp">Return To Menu</a></li>
+</ul>
+<br>
+<br>
+</head>
 <%
 	String error = request.getParameter("Error");
 	if(error != null && error.equals("-1")){
@@ -23,18 +59,9 @@ Account account = adminUi.viewOthersProfile(username);
 		out.println("Add user failed, please try again");
 }
 %>
-</head>
-<body>
-<br>
-Edit User form:<br>
-<br>
-
-<%
-    out.println("Edit user : " + username);
-%>
 <form method="post" action="EditUser_action.jsp" name="editUser"><br>
-<table style="text-align: left; width: 266px; height: 228px;"
-border="1" >
+<table style="background-color:white; border-radius: 5px; text-align: left; width: 500px; height: 154px; margin-left: auto; margin-right: auto; 
+border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
 <td style="vertical-align: top;">First Name<br>
@@ -81,5 +108,14 @@ name="Reset" type="reset"></td>
 <br>
 </form>
 <br>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

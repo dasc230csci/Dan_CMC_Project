@@ -1,4 +1,5 @@
 <%@ page language="java" import="UI.*"%>
+<%@include file="userVerifyLogin.jsp"%>
 <%
 UserUI userUI = (UserUI)session.getAttribute("userUi");
 String username = userUI.viewProfile().getUsername();

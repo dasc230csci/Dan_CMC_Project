@@ -12,7 +12,7 @@ body {font-family: Verdana,sans-serif;margin:0; background-color:#444444}
 }
 #logginblock{
 	width: 400px;
-	height: 250px;
+	height: 300px;
 	background-color: white;
 	background-position:center;
 	margin:auto;
@@ -21,6 +21,18 @@ body {font-family: Verdana,sans-serif;margin:0; background-color:#444444}
 </style>
 <head>
 <title>Login Form</title>
+</head>
+<body>
+<div id="banner">
+</div>
+<br>
+<div id="logginblock">
+<center>
+<h1 >Login Form</h1>
+</center>
+<center>
+<h4 style="color:#FF0000">
+<b>
 <%
 String error = request.getParameter("Error");
 if(error != null && error.equals("1")){
@@ -32,20 +44,18 @@ else if(error != null && error.equals("2")){
 else if(error != null && error.equals("3")){
 	out.println("Deactivated User");
 }
+else if(error != null && error.equals("3")){
+	out.println("Deactivated User");
+}
+else if(error != null && error.equals("4")){
+	out.println("Please Login to use website");
+}
 %>
-</head>
-<body>
-<div id="banner">
-</div>
-<br>
-<div id="logginblock">
-<center>
-<h1 >Login form</h1>
-</center>
-<center>
+</b>
+</h4>
 <form method="post" action="Login_action.jsp" name="Login"><br>
-<table style="text-align: left; width: 200px; height: 150px;"
-border="0">
+<table style="background-color:white; border-radius: 5px; text-align: center; width: 300px; height: 154px; margin-left: auto; margin-right: auto; 
+border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
 <td style="vertical-align: top;">Username<br>
@@ -72,5 +82,14 @@ name="Log in" type="submit">&nbsp;&nbsp;&nbsp;
 </form>
 </div>
 <br>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

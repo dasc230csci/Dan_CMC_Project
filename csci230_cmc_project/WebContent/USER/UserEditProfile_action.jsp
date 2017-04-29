@@ -1,4 +1,5 @@
 <%@page language="java" import="UI.*" import = "Entity.*"%>
+<%@include file="userVerifyLogin.jsp"%>
 <%
 UserUI userUi = (UserUI)session.getAttribute("userUi");
 String firstName = request.getParameter("FirstName");

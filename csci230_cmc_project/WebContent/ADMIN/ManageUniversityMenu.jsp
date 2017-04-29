@@ -1,15 +1,51 @@
 <%@page language="java" import="UI.*, Entity.*"%>
 <%@include file="adminVerifyLogin.jsp"%>
 <html>
+<style>
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+table {
+   border: none;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #f5f5f5}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: center;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+</style>
 <head>
-<title></title>
+<link href="CSS.html" rel="stylesheet" type="text/css" />
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<ul>
+  <li><a class="active" href="AdminMenu.jsp">Return To Menu</a></li>
+</ul>
+<br>
+<br>
 </head>
 <body>
+<center><h3 style="color:white"> Manage University</h3></center>
 <%
 AdminUI adminUi = (AdminUI)session.getAttribute("adminUi");
 %>
 
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+<table style="text-align: left; background-color: white; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr align="center">
@@ -109,5 +145,15 @@ for(University u : adminUi.viewUniversityList()){%>
 <%}%>
 </tbody>
 </table>
+<br>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

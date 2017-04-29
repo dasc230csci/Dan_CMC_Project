@@ -1,5 +1,5 @@
 <%@page language="java" import="Controller.*, java.util.*, UI.*"%>
-
+<%@include file="adminVerifyLogin.jsp"%>
 <%
 	AdminUI adminUi = (AdminUI)session.getAttribute("adminUi");
 	ArrayList<String> schoolInfo = new ArrayList<String>();
