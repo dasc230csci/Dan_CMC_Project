@@ -30,10 +30,7 @@ else if(error != null && error.equals("2")){
 	out.println("Username or Password is invalid");
 }
 else if(error != null && error.equals("3")){
-	out.println("Error with accessing database");
-}
-else if(error != null && error.equals("-4")){
-	out.println("Must be logged in to access.");
+	out.println("Deactivated User");
 }
 %>
 </head>
@@ -77,8 +74,3 @@ name="Log in" type="submit">&nbsp;&nbsp;&nbsp;
 <br>
 </body>
 </html>
-
-    Contact GitHub API Training Shop Blog About 
-
-    © 2017 GitHub, Inc. Terms Privacy Security Status Help 
-

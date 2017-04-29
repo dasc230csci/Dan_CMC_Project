@@ -15,13 +15,13 @@ AdminUI aUI = (AdminUI)session.getAttribute("adminUi");
 </head>
 <body>
 
-Hello User <% out.println(aUI.viewProfile().getUsername()); %>
+Hello User <%out.println(aUI.viewProfile().getUsername());%>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr align="center">
 
-<td colspan="8" rowspan="1" style="vertical-align: top;"><a
+<td colspan="10" rowspan="1" style="vertical-align: top;"><a
 href="AddUser.jsp">ADD A USER</a>
 </td>
 
@@ -42,6 +42,10 @@ Edit
 <td style="vertical-align: top; text-align: center;">Status
 </td>
 <td style="vertical-align: top;">Deactivate
+</td>
+<td style="vertical-align: top;">Reactivate
+</td>
+<td style="vertical-align: top;">Delete
 </td>
 </tr>
 <%
@@ -79,7 +83,7 @@ for(Account account: aUI.viewAllUser()){
 </td>
 <td style="vertical-align: top;">
 <form method="post" action="DeleteUser.jsp" name="DeleteUser">
-    <input name="DeleteUser" value="DeleteUser" type="submit">
+    <input name="Delete" value="Delete" type="submit">
     <input name="Username" value="<%out.print(account.getUsername());%>" type="hidden">
 </form>
 </td>

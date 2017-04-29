@@ -8,6 +8,21 @@ Account account = adminUi.viewOthersProfile(username);
 <head>
 
 <title>Edit User Form</title>
+<%
+	String error = request.getParameter("Error");
+	if(error != null && error.equals("-1")){
+		out.println("Please input value in the required fields");
+}
+	if(error != null && error.equals("-2")){
+		out.println("Invalid type, please input a(admin) or u(user)");
+}
+	if(error != null && error.equals("-3")){
+		out.println("Invalid status, please input Y(active) or N(inactive)");
+}
+	if(error != null && error.equals("-4")){
+		out.println("Add user failed, please try again");
+}
+%>
 </head>
 <body>
 <br>
@@ -17,7 +32,7 @@ Edit User form:<br>
 <%
     out.println("Edit user : " + username);
 %>
-<form method="post" action="Edit_action.jsp" name="editUser"><br>
+<form method="post" action="EditUser_action.jsp" name="editUser"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
 border="1" >
 <tbody>
@@ -68,4 +83,3 @@ name="Reset" type="reset"></td>
 <br>
 </body>
 </html>
-

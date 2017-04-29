@@ -14,7 +14,7 @@ cellspacing="2">
 <tbody>
 <tr align="center">
 
-<td colspan="17" rowspan="1" style="vertical-align: top;"><a
+<td colspan="19" rowspan="1" style="vertical-align: top;"><a
 href="AddUniversity.jsp">Add a new University</a>
 </td>
 
@@ -51,6 +51,8 @@ href="AddUniversity.jsp">Add a new University</a>
 <td style="vertical-align: top; text-align: center;">Social Scale
 </td>
 <td style="vertical-align: top; text-align: center;">Quality of Life Scale
+</td>
+<td style="vertical-align: top; text-align: center;">
 </td>
 <td style="vertical-align: top; text-align: center;">
 </td>

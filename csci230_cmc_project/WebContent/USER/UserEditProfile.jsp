@@ -1,7 +1,7 @@
 <%@page language="java" import="UI.*" import = "Entity.*"%>
 <% UserUI uUI = (UserUI)session.getAttribute("userUi");
 	String error= request.getParameter("Error");
-	if(error != null && error.equals("-1")){
+	if(error != null && error.equals("1")){
 		out.println("please input value in the required fields");
 	}
 %>

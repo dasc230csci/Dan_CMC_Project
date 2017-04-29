@@ -87,6 +87,7 @@ li a:hover {
 <ul>
   <li><a class="active" href="ManageUniversityMenu.jsp">Manage University</a></li>
   <li><a class ="active" href="ManageUserMenu.jsp">Manage User</a></li>
+  <li><a class ="active" href="AdminLogOut.jsp">Log Out</a></li>
 </ul>
 <br>
 Hello User <%out.println(adminUi.viewProfile().getUsername());%>
